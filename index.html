@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Forte</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f4f7f2;
+      color:#222;
+      line-height:1.6;
+    }
+
+    header{
+      width:100%;
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+    }
+
+    nav{
+      width:100%;
+      padding:25px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.3);
+      backdrop-filter:blur(5px);
+      position:fixed;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#fff;
+      font-size:32px;
+      font-weight:700;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#9be15d;
+    }
+
+    .hero{
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:850px;
+      color:#fff;
+    }
+
+    .hero-content h2{
+      font-size:65px;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#4CAF50;
+      color:#fff;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#2e7d32;
+      transform:translateY(-3px);
+    }
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      color:#2e7d32;
+      margin-bottom:15px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      color:#2e7d32;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .numbers{
+      background:#2e7d32;
+      color:#fff;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+
+    .stat h3{
+      font-size:52px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .contact{
+      background:#fff;
+      border-radius:20px;
+      padding:50px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    form{
+      display:grid;
+      gap:20px;
+    }
+
+    input, textarea{
+      padding:16px;
+      border:1px solid #ccc;
+      border-radius:12px;
+      outline:none;
+      font-size:16px;
+    }
+
+    textarea{
+      resize:none;
+      height:150px;
+    }
+
+    footer{
+      background:#1b1b1b;
+      color:#fff;
+      text-align:center;
+      padding:30px;
+      margin-top:60px;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero-content h2{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+      <h1>AGRO FORTE</h1>
+
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#dados">Dados</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h2>O Agro Move o Brasil</h2>
+
+        <p>
+          Tecnologia, inovação e produtividade no campo.
+          O futuro do agronegócio começa aqui.
+        </p>
+
+        <a href="#sobre" class="btn">Conheça Mais</a>
+      </div>
+    </div>
+
+  </header>
+
+  <section id="sobre">
+
+    <div class="section-title">
+      <h2>Sobre o Agro Forte</h2>
+
+      <p>
+        O agronegócio é um dos pilares da economia brasileira,
+        conectando inovação, sustentabilidade e produção.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🌱 Sustentabilidade</h3>
+        <p>
+          Produção consciente com foco em preservação ambiental
+          e uso inteligente dos recursos naturais.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🚜 Tecnologia</h3>
+        <p>
+          Máquinas modernas, agricultura de precisão e automação
+          aumentando a produtividade.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🌎 Impacto Global</h3>
+        <p>
+          O Brasil alimentando o mundo através de um agronegócio
+          forte e competitivo.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="numbers" id="dados">
+
+    <div class="section-title">
+      <h2 style="color:#fff;">Números do Agro</h2>
+    </div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <h3>27%</h3>
+        <p>Do PIB Brasileiro</p>
+      </div>
+
+      <div class="stat">
+        <h3>50M+</h3>
+        <p>Hectares Plantados</p>
+      </div>
+
+      <div class="stat">
+        <h3>100+</h3>
+        <p>Países Importadores</p>
+      </div>
+
+      <div class="stat">
+        <h3>1M+</h3>
+        <p>Empregos Gerados</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="servicos">
+
+    <div class="section-title">
+      <h2>Nossos Serviços</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Consultoria Rural</h3>
+        <p>
+          Estratégias para aumentar produtividade e melhorar resultados no campo.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Agricultura Inteligente</h3>
+        <p>
+          Monitoramento com drones, sensores e análise de dados.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Logística Agrícola</h3>
+        <p>
+          Soluções modernas para transporte e armazenamento da produção.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="galeria">
+
+    <div class="section-title">
+      <h2>Galeria Agro Forte</h2>
+    </div>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </section>
+
+  <section id="contato">
+
+    <div class="section-title">
+      <h2>Entre em Contato</h2>
+    </div>
+
+    <div class="contact">
+
+      <form>
+
+        <input type="text" placeholder="Seu Nome">
+
+        <input type="email" placeholder="Seu E-mail">
+
+        <textarea placeholder="Digite sua mensagem"></textarea>
+
+        <button class="btn">Enviar Mensagem</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Agro Forte - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
